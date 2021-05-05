@@ -36,7 +36,7 @@ public class MainFirefox {
         driver.get("https://sonuc.ysk.gov.tr/sorgu");
         // Seçim adı ile sorgulaya tıklıyoruz.
         ///html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-secim/div/div/div[2]/div/div/div[3]/button/div/div/div/div[1]/span
-        Thread.sleep(200);
+        Thread.sleep(200);  // YSK sitesi kod üzerinden beklemeyi blokladığı için mecburen bütün bekleme işlemlerimizi manuel olarak yapıyoruz.
         driver.findElement(By.xpath("/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-secim/div/div/div[2]/div/div/div[3]/button/div/div/div/div[1]/span")).click();
     }
 
