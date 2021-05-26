@@ -21,12 +21,12 @@ public class MainFirefox {
         firefoxOptions = new FirefoxOptions();
         // profile.setPreference("browser.download.useDownloadDir", true); This is true by default. Add it if it's not working without it.
         profile.setPreference("browser.download.folderList",2); //Use for the default download directory the last folder specified for a download
-        profile.setPreference("browser.download.dir", "C:\\Users\\Salih\\Desktop\\Secim Sonuclari"); //Set the last directory used for saving a file from the "What should (browser) do with this file?" dialog.
+        profile.setPreference("browser.download.dir", "./Secim Sonuclari"); //Set the last directory used for saving a file from the "What should (browser) do with this file?" dialog.
         profile.setPreference("browser.helperApps.alwaysAsk.force", false);
         profile.setPreference("browser.download.manager.showWhenStarting", false);
         profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/x-excel, application/x-msexcel, application/excel, application/vnd.ms-excel");
         firefoxOptions.setProfile(profile);
-        System.setProperty("webdriver.gecko.driver","C:\\Users\\Salih\\Desktop\\Secim Verileri Toplama\\libraries\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","./libraries/geckodriver.exe");
         driver = new FirefoxDriver(firefoxOptions);
         wait = new WebDriverWait(driver,10);
     }
